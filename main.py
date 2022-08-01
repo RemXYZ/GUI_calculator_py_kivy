@@ -12,8 +12,12 @@ if __name__ != '__main__':
     exit()
 
 
-class MainWidget(Widget):
-    pass
+
+
+
+#
+# class MainWidget(Widget):
+#     pass
 
 
 class TheLabApp(App):
