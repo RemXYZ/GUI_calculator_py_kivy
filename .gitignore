@@ -1,1 +1,4 @@
 /venv
+/dist
+/duild
+/.idea

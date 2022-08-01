@@ -1,0 +1,7 @@
+('c:\\users\\rem_admin\\pycharmprojects\\guipy\\calculator_kivy\\venv\\share\\glew\\bin',
+ None,
+ [],
+ 'DATA',
+ [('glew32.dll',
+   'c:\\users\\rem_admin\\pycharmprojects\\guipy\\calculator_kivy\\venv\\share\\glew\\bin\\glew32.dll',
+   'DATA')])
