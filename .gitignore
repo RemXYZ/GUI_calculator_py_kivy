@@ -2,7 +2,8 @@
 bin/
 build/
 dist/
-.idea/
+venv/
+.idea
 
 # Unit test / coverage reports
 .tox/
