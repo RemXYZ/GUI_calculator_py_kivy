@@ -20,19 +20,26 @@ class MyGridLayout(GridLayout):
         super(MyGridLayout, self).__init__(**kwargs)
 
         # Set columns
-        self.cols = 2
+        self.cols = 1
+
+        #Second gridlayout
+        self.top_grid = GridLayout()
+        self.top_grid.cols = 2
 
         #Add widgets
-        self.add_widget(Label(text="Name: "))
+        self.top_grid.add_widget(Label(text="Name: "))
 
         self.name = TextInput(multiline = False)
-        self.add_widget(self.name)
+        self.top_grid.add_widget(self.name)
 
 
-        self.add_widget(Label(text="Favorite Pizza: "))
+        self.top_grid.add_widget(Label(text="Favorite Pizza: "))
 
         self.pizza = TextInput(multiline=True)
-        self.add_widget(self.pizza)
+        self.top_grid.add_widget(self.pizza)
+
+        # The new top_grid to our app
+        self.add_widget(self.top_grid)
 
         # submit button
         self.submit = Button(text="Submit", font_size=32)
