@@ -1,24 +1,26 @@
 <MyGridLayout>
-    GridLayuot:
-        cols: 1
+    name:name
+    pizza:pizza
 
+    GridLayout:
+        cols: 1
+        size: root.width, root.height
         GridLayout:
             cols: 2
 
             Label:
                 text: "Name"
             TextInput:
+                id: name
                 multiline:True
 
             Label:
-                text: "Name"
+                text: "Favorite Pizza"
             TextInput:
+                id: pizza
                 multiline:True
 
-            Label:
-                text: "Name"
-            TextInput:
-                multiline:True
-
-
-
+        Button:
+            text: "Sumbit"
+            font_size: 32
+            on_press: root.press()
