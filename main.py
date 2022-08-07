@@ -10,7 +10,7 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
-Builder.load_file('layout.kv')
+Builder.load_file('box.kv')
 
 
 # pyinstaller main.py
