@@ -8,6 +8,9 @@ from kivy.uix.button import Button
 
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.lang import Builder
+
+Builder.load_file('layout.kv')
 
 
 # pyinstaller main.py
@@ -22,7 +25,6 @@ class MyGridLayout(Widget):
     name = ObjectProperty(None)
     pizza = ObjectProperty(None)
 
-
     def press(self):
         name = self.name.text
         pizza = self.pizza.text
@@ -35,9 +37,9 @@ class MyGridLayout(Widget):
         self.pizza.text = ""
 
 
-class MyApp(App):
+class AwesomeApp(App):
     def build(self):
         return MyGridLayout()
 
 
-MyApp().run()
+AwesomeApp ().run()

@@ -1,3 +1,4 @@
+#:import utils kivy.utils
 <MyGridLayout>
     name:name
     pizza:pizza
@@ -13,6 +14,7 @@
             TextInput:
                 id: name
                 multiline:True
+                background_color: utils.get_color_from_hex('#eefa00')
 
             Label:
                 text: "Favorite Pizza"
@@ -24,3 +26,8 @@
             text: "Sumbit"
             font_size: 32
             on_press: root.press()
+            #RGB - A
+            background_normal: ""
+            #background_color: (238/255,250/255,50/255,1)
+
+            background_color: utils.get_color_from_hex('#eefa00')
