@@ -21,25 +21,12 @@ if __name__ != '__main__':
 
 # START OF PROGRAM
 
-class MyGridLayout(Widget):
-    name = ObjectProperty(None)
-    pizza = ObjectProperty(None)
-
-    def press(self):
-        name = self.name.text
-        pizza = self.pizza.text
-
-        #print(f"Hello {name} your favorite pizza is {pizza}")
-        # print it to the screen
-        #self.add_widget(Label(text=f"Hello {name} your favorite pizza is {pizza}"))
-        print(f"Hello {name} and your favorite pizza is {pizza}")
-        self.name.text = ""
-        self.pizza.text = ""
-
+class MyLayout(Widget):
+    pass
 
 class AwesomeApp(App):
     def build(self):
-        return MyGridLayout()
+        return MyLayout()
 
 
 AwesomeApp ().run()
