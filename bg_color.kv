@@ -3,6 +3,13 @@
 
 
 <MyLayout>
+    #canvas.before:
+    #    Color:
+    #        rgba: (240/255, 230/255, 200/255, 1)
+    #    Rectangle:
+    #        pos: self.pos
+    #        size: self.size
+
     BoxLayout:
         orientation: "vertical"
         size: root.width, root.height

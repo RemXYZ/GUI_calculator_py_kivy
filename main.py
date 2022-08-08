@@ -9,8 +9,9 @@ from kivy.uix.button import Button
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
+from kivy.core.window import Window
 
-Builder.load_file('lebel_color.kv')
+Builder.load_file('bg_color.kv')
 
 
 # pyinstaller main.py
@@ -26,6 +27,7 @@ class MyLayout(Widget):
 
 class AwesomeApp(App):
     def build(self):
+        Window.clearcolor = (1,1,1,1)
         return MyLayout()
 
 
