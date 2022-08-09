@@ -13,7 +13,10 @@ from kivy.core.window import Window
 # For images
 #from kivy.uix.image import Image
 
-Builder.load_file('images.kv')
+# Float latout
+#from kivy.uix.floatlayout import Float
+
+Builder.load_file('design.kv')
 
 
 # pyinstaller main.py
@@ -33,4 +36,4 @@ class AwesomeApp(App):
         return MyLayout()
 
 
-AwesomeApp ().run()
+AwesomeApp().run()
