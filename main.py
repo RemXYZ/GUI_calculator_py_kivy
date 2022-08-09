@@ -10,8 +10,10 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
+# For images
+#from kivy.uix.image import Image
 
-Builder.load_file('bg_color.kv')
+Builder.load_file('images.kv')
 
 
 # pyinstaller main.py
