@@ -9,16 +9,19 @@
 
 
 		Button:
+		    id: top_left
 			text: "Top Left"
 			# {"x", "y", "top", "bottom", "left", "right"}
-			pos_hint: {"x":0, "top":1}
+			pos_hint: {"x":0.2, "top":1}
 
 		Button:
 			text: "Top Right"
 			pos_hint: {"x":.7, "top":1}
+
 		Button:
 			text: "Center"
 			pos_hint: {"x":0.35, "top":0.66}
+			on_press: root.move()
 
 		Button:
 			text: "Bottom Left"

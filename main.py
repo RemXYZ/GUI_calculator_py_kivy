@@ -16,7 +16,7 @@ from kivy.core.window import Window
 # Float latout
 #from kivy.uix.floatlayout import Float
 
-Builder.load_file('design.kv')
+Builder.load_file('float_layout.kv')
 
 
 # pyinstaller main.py
@@ -28,11 +28,16 @@ if __name__ != '__main__':
 # START OF PROGRAM
 
 class MyLayout(Widget):
-    pass
+    def press(self):
+        #ids is for referens to ID!!
+        name = self.ids.name_input.text
+
+        #update the label
+        self.ids.name_label.text = name
 
 class AwesomeApp(App):
     def build(self):
-        Window.clearcolor = (1,1,1,1)
+        # Window.clearcolor = (1,1,1,1)
         return MyLayout()
 
 
