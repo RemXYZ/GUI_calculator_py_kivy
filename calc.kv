@@ -1,0 +1,106 @@
+<CalcNumButton@Button>
+    size_hint: (.2, .2)
+    font_size: 32
+    background_color: (157/255, 157/255, 157/255, 1)
+
+<MyLayout>
+	BoxLayout:
+		orientation: "vertical"
+		size: root.width, root.height
+
+		TextInput:
+			id: calc_input
+			text: "0"
+			halign: "right"
+			font_size: 65
+			size_hint: (1, .15)
+			on_touch_down: self.text = ''
+
+		GridLayout:
+			cols: 4
+			rows: 5
+
+			# Row
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "%"
+
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "CE"
+
+			Button:
+				id: clear
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "C"
+				on_press: root.clear()
+
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "/"
+
+			# Row
+			CalcNumButton:
+				text: "7"
+
+			CalcNumButton:
+				text: "8"
+
+			CalcNumButton:
+				text: "9"
+
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "X"
+
+			# Row
+			CalcNumButton:
+				text: "4"
+
+			CalcNumButton:
+
+				text: "5"
+
+			CalcNumButton:
+				text: "6"
+
+			Button:
+			    size_hint: (.2, .2)
+				font_size: 32
+				text: "-"
+
+			# Row
+			CalcNumButton:
+				text: "1"
+
+			CalcNumButton:
+				text: "2"
+
+			CalcNumButton:
+				text: "3"
+
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "+"
+
+			# Row
+			CalcNumButton:
+				text: "+/-"
+
+			CalcNumButton:
+				text: "0"
+
+			CalcNumButton:
+				text: "."
+
+
+			Button:
+				size_hint: (.2, .2)
+				font_size: 32
+				text: "="

@@ -12,11 +12,10 @@ from kivy.lang import Builder
 from kivy.core.window import Window
 # For images
 #from kivy.uix.image import Image
-
 # Float latout
 #from kivy.uix.floatlayout import Float
 
-Builder.load_file('float_layout.kv')
+Builder.load_file('calc.kv')
 
 
 # pyinstaller main.py
@@ -35,10 +34,11 @@ class MyLayout(Widget):
         #update the label
         self.ids.name_label.text = name
 
-class AwesomeApp(App):
+class CalculatorApp(App):
     def build(self):
         # Window.clearcolor = (1,1,1,1)
         return MyLayout()
 
-
-AwesomeApp().run()
+# Set size of window
+Window.size = (500,700)
+CalculatorApp().run()
