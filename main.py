@@ -34,6 +34,15 @@ class MyLayout(Widget):
         #update the label
         self.ids.name_label.text = name
 
+    def button_num_press(self, num):
+        prior = self.ids.calc_input.text
+        if prior == "0":
+            self.ids.calc_input.text = num
+        else:
+            self.ids.calc_input.text = prior + num
+        print(num)
+
+
 class CalculatorApp(App):
     def build(self):
         # Window.clearcolor = (1,1,1,1)

@@ -1,7 +1,4 @@
-<CalcNumButton@Button>
-    size_hint: (.2, .2)
-    font_size: 32
-    background_color: (157/255, 157/255, 157/255, 1)
+
 
 <MyLayout>
 	BoxLayout:
@@ -25,6 +22,7 @@
 				size_hint: (.2, .2)
 				font_size: 32
 				text: "%"
+				on_press: root.button_num_press(self.text)
 
 			Button:
 				size_hint: (.2, .2)
@@ -98,9 +96,20 @@
 
 			CalcNumButton:
 				text: "."
+				on_press: print(root)
+
 
 
 			Button:
 				size_hint: (.2, .2)
 				font_size: 32
 				text: "="
+				on_press: print(self)
+
+
+<CalcNumButton@Button>
+    size_hint: (.2, .2)
+    font_size: 32
+    background_color: (157/255, 157/255, 157/255, 1)
+    on_press: app.root.button_num_press(self.text)
+    #root.button_num_press(self.text)
