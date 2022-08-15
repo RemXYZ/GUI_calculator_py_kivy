@@ -18,27 +18,23 @@
 			rows: 5
 
 			# Row
-			Button:
-				size_hint: (.2, .2)
-				font_size: 32
+			SignButton:
 				text: "%"
-				on_press: root.button_num_press(self.text)
 
 			Button:
-				size_hint: (.2, .2)
-				font_size: 32
-				text: "CE"
-
-			Button:
-				id: clear
 				size_hint: (.2, .2)
 				font_size: 32
 				text: "C"
 				on_press: root.clear()
 
 			Button:
+				id: clear
 				size_hint: (.2, .2)
 				font_size: 32
+				text: u"\u00AB"
+				on_press: root.remove()
+
+			SignButton:
 				text: "/"
 
 			# Row
@@ -51,10 +47,8 @@
 			CalcNumButton:
 				text: "9"
 
-			Button:
-				size_hint: (.2, .2)
-				font_size: 32
-				text: "X"
+			SignButton:
+				text: "x"
 
 			# Row
 			CalcNumButton:
@@ -67,9 +61,7 @@
 			CalcNumButton:
 				text: "6"
 
-			Button:
-			    size_hint: (.2, .2)
-				font_size: 32
+			SignButton:
 				text: "-"
 
 			# Row
@@ -82,21 +74,23 @@
 			CalcNumButton:
 				text: "3"
 
-			Button:
-				size_hint: (.2, .2)
-				font_size: 32
+			SignButton:
 				text: "+"
 
 			# Row
-			CalcNumButton:
+			Button:
+			    size_hint: (.2, .2)
+				font_size: 32
 				text: "+/-"
+				background_color: (157/255, 157/255, 157/255, 1)
+				on_press: root.pos_neg()
 
 			CalcNumButton:
 				text: "0"
 
 			CalcNumButton:
 				text: "."
-				on_press: print(root)
+				on_press: root.dot()
 
 
 
@@ -104,12 +98,17 @@
 				size_hint: (.2, .2)
 				font_size: 32
 				text: "="
-				on_press: print(self)
+				on_press: root.equals()
 
 
 <CalcNumButton@Button>
     size_hint: (.2, .2)
     font_size: 32
     background_color: (157/255, 157/255, 157/255, 1)
-    on_press: app.root.button_num_press(self.text)
+    on_press: app.root.write_num(self.text)
     #root.button_num_press(self.text)
+
+<SignButton@Button>
+    size_hint: (.2, .2)
+    font_size: 32
+    on_press: app.root.math_sign(self.text)
