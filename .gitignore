@@ -11,3 +11,4 @@ venv/
 .cache
 nosetests.xml
 coverage.xml
+main.cpec
