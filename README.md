@@ -1,4 +1,7 @@
 # GUI_calculator_py_kivy
+
+![App_img](/app_img/app_img.png)
+
 I'm just learning <b>Kivy python library</b> and <b> pyinstaller python library</b> :)
 
 This is just GUI calculator, and it was created precisely according to the <b>Codemy.com guides</b>, and here is a link to it: https://www.youtube.com/watch?v=dLgquj0c5_U&list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg&index=1&ab_channel=Codemy.com 
