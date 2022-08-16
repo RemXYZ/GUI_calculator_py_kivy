@@ -1,21 +1,21 @@
 #turotial: https://www.youtube.com/watch?v=S41RPtdWe78&list=PLCC34OHNcOtpz7PJQ7Tv7hqFBP_xDDjqg&index=6&ab_channel=Codemy.com
 
+import sys
+import os
+
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
 
 from kivy.uix.widget import Widget
-from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
-# For images
-#from kivy.uix.image import Image
-# Float latout
-#from kivy.uix.floatlayout import Float
 
-Builder.load_file('calc.kv')
+def resource_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
+
+Builder.load_file(resource_path('calc.kv'))
 
 
 # pyinstaller main.py
