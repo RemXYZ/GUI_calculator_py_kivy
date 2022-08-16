@@ -1,6 +1,6 @@
 # GUI_calculator_py_kivy
 
-![App_img](/app_img/app_img.png | width=200)
+![App_img](/app_img/app_img.png | width="200px")
 
 I'm just learning <b>Kivy python library</b> and <b> pyinstaller python library</b> :)
 
